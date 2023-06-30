@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+    background: #8fd1a3;
+}
+
+.container {
+    width: 400px;
+    padding: 25px 35px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border-radius: 10px; */
+    border-radius: 10px;box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container p {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.container input {
+    width: 100%;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+}
+
+#generator {
+    width: 100%;
+    height: 50px;
+    background: #494eea;
+    color: white;
+    font-weight: 500px;
+    margin: 20px 0;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#generator:hover {
+    background: green;
+}
+
+#qrBox {
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#qrBox img {
+    width: 100%;
+    padding: 10px;
+}
+
+#qrBox.show-qr{
+    max-height: 300px;
+    margin: 10px auto;
+    /* border: 1px solid #d1d1d1; */
+}
+
+.error {
+    border-color: red;
+    animation: shake 0.1s linear 5;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-4px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(4px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
